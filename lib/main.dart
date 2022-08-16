@@ -4,9 +4,11 @@ void main() => runApp(
       MaterialApp(
         home: Scaffold(
           body: Card(
-            child: Text('Teste'),
-            Text('Teste'),
-            Text('Teste'),
+            child: Column(
+              children: [
+                Text('Teste'),
+              ],
+            ),
           ),
           appBar: AppBar(
             title: Text('Transferência'),
