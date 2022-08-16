@@ -4,10 +4,10 @@ void main() => runApp(
       MaterialApp(
         home: Scaffold(
           body: Card(
-            child: Column(
-              children: [
-                Text('Teste'),
-              ],
+            child: ListTile(
+              leading: Icon(Icons.monetization_on),
+              title: Text('123456-7'),
+              subtitle: Text('1000'),
             ),
           ),
           appBar: AppBar(
