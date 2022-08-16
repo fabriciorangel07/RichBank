@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Column(
-            children: [
-              Text('Teste'),
-            ],
+          body: Card(
+            child: Text('Teste'),
           ),
           appBar: AppBar(
             title: Text('Transferência'),
