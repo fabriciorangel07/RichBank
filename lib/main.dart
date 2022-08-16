@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        home: Text('hello word'),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Transferência'),
+          ),
+        ),
       ),
     );
