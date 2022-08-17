@@ -25,16 +25,16 @@ class ListaTransferencia extends StatelessWidget {
     // TODO: implement build
     return Column(children: [
       ItemTransferencia('1.000,00', '1234-5'),
+      ItemTransferencia('2.000,00', '1234-5'),
     ]);
   }
 }
 
 class ItemTransferencia extends StatelessWidget {
-
   final String valor;
   final String numeroConta;
 
-  ItemTransferencia (this.valor, this.numeroConta);
+  ItemTransferencia(this.valor, this.numeroConta);
 
   @override
   Widget build(BuildContext context) {
