@@ -1,31 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Column(children: [
-            Card(
-              child: ListTile(
-                leading: Icon(Icons.monetization_on),
-                title: Text('123456-7'),
-                subtitle: Text('1000'),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                leading: Icon(Icons.monetization_on),
-                title: Text('123456-7'),
-                subtitle: Text('1000'),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                leading: Icon(Icons.monetization_on),
-                title: Text('123456-7'),
-                subtitle: Text('1000'),
-              ),
-            ),
-          ]),
+          body: ListaTransferencia(),
           appBar: AppBar(
             title: Text('Transferência'),
           ),
@@ -39,3 +18,33 @@ void main() => runApp(
         ),
       ),
     );
+
+class ListaTransferencia extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Column(children: [
+      Card(
+        child: ListTile(
+          leading: Icon(Icons.monetization_on),
+          title: Text('123456-7'),
+          subtitle: Text('1000'),
+        ),
+      ),
+      Card(
+        child: ListTile(
+          leading: Icon(Icons.monetization_on),
+          title: Text('123456-7'),
+          subtitle: Text('1000'),
+        ),
+      ),
+      Card(
+        child: ListTile(
+          leading: Icon(Icons.monetization_on),
+          title: Text('123456-7'),
+          subtitle: Text('1000'),
+        ),
+      ),
+    ]);
+  }
+}
