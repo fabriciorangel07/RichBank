@@ -30,6 +30,7 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_tituloAppBar),
+        backgroundColor: Colors.black45,
       ),
       body: SingleChildScrollView(
         child: Column(

@@ -20,6 +20,7 @@ class ListaTransferenciaState extends State<ListaTransferencia> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_tituloAppBar),
+        backgroundColor: Colors.redAccent [200],
       ),
       body: ListView.builder(
         itemCount: widget._transferencias.length,
