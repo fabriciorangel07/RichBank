@@ -57,7 +57,6 @@ class FormularioContatosState extends State<FormularioContatos> {
               controlador: _controladorCampoEndereco,
               rotulo: _rotuloCampoEndereco,
               dica: _dicaCampoEndereco,
-              // icone: Icons.monetization_on,
             ),
             Editor_Contato(
               controlador: _controladorCampoTelefone,
@@ -103,13 +102,13 @@ class FormularioContatosState extends State<FormularioContatos> {
     final String? CPF = (
       _controladorCampoCPF.text
     );
-    if (nome != null && endereco != null) {
+    if (nome != null && endereco != null && telefone != null && email != null && CPF != null) {
       final usuarioCriado = Contatos(
         nome,
         endereco,
-        telefone!,
-        email!,
-        CPF!,
+        telefone,
+        email,
+        CPF,
       );
       //debugPrint('Criando transferência');
       //debugPrint('$transferenciaCriada');

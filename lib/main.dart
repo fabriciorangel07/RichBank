@@ -12,6 +12,7 @@ class Banco extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: MenuDashboard(),
+        backgroundColor: Color.fromARGB(255, 56, 4, 8),
       ),
     );
   }
