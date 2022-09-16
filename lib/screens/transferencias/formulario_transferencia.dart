@@ -30,7 +30,7 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_tituloAppBar),
-        backgroundColor: Colors.black45,
+        backgroundColor: Colors.black26,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -55,12 +55,12 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
           ],
         ),
       ),
+
       backgroundColor: Colors.purple,
     );
   }
 
   void _criaTransferencia(BuildContext context) {
-    //debugPrint('Clicou em confirmar');
     final int? numeroConta = int.tryParse(
       _controladorCampoNumeroConta.text,
     );
@@ -72,8 +72,6 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
         valor,
         numeroConta,
       );
-      //debugPrint('Criando transferência');
-      //debugPrint('$transferenciaCriada');
       Navigator.pop(context, transferenciaCriada);
     }
   }

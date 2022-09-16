@@ -1,8 +1,6 @@
-import 'package:aula01/components/editor.dart';
 import 'package:aula01/components/editor_contato.dart';
 import 'package:flutter/material.dart';
 import '../../models/form_contato.dart';
-import '../../models/transferencia.dart';
 
 const _tituloAppBar = 'Cadastro de Clientes';
 
@@ -46,6 +44,7 @@ class FormularioContatosState extends State<FormularioContatos> {
         backgroundColor: Colors.black45,
       ),
       body: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: Column(
           children: [
             Editor_Contato(

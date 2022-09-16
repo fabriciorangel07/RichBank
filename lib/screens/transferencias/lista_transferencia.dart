@@ -1,3 +1,6 @@
+import 'dart:ffi';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../../models/transferencia.dart';
 import 'formulario_transferencia.dart';
@@ -22,11 +25,10 @@ class ListaTransferenciaState extends State<ListaTransferencia> {
         title: Text(_tituloAppBar),
         backgroundColor: Colors.redAccent [300],
       ),
-      backgroundColor: Color.fromARGB(255, 59, 2, 11),
+      backgroundColor: Color.fromARGB(173, 84, 17, 24),
       body: ListView.builder(
         itemCount: widget._transferencias.length,
         itemBuilder: ((context, indice) {
-          backgroundColor: Colors.black45;
           final transferencia = widget._transferencias[indice];
           return ItemTransferencia(transferencia);
         }),
@@ -44,8 +46,6 @@ class ListaTransferenciaState extends State<ListaTransferencia> {
           );
           future.then(
             (transferenciaRecebida) {
-              //debugPrint('Chegou no then do future');
-              //debugPrint('$transferenciaRecebida');
               if (transferenciaRecebida != null) {
                 setState(
                   () {

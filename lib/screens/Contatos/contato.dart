@@ -22,7 +22,7 @@ class ListaContatosState extends State<ListaContatos> {
         title: Text(_tituloAppBar),
         backgroundColor: Colors.redAccent[200],
       ),
-      backgroundColor: Color.fromARGB(255, 44, 42, 42),
+      backgroundColor: Color.fromARGB(255, 107, 103, 103),
       body: ListView.builder(
         itemCount: widget._contatos.length,
         itemBuilder: ((context, indice) {
@@ -69,17 +69,27 @@ class ItemContato extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    backgroundColor: var blue = Colors.blue;
     return Container(
       child: ListTile(
         leading: Icon(Icons.contact_mail_rounded),
-        title: Text(
-          _contato.nome.toString(),
+        title: Text('Nome: ' + _contato.nome.toString(),
           style: TextStyle(fontSize: 24.0),
         ),
-        subtitle: Text(
-          _contato.endereco.toString(),
+        subtitle: Container(
+          child: (Column (
+              crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text('Endereço: ' + _contato.endereco.toString(), style: TextStyle(fontSize: 16, color: Colors.white)),
+              Text('Telefone: ' + _contato.telefone.toString(), style: TextStyle(fontSize: 16, color: Colors.blue)),
+              Text('Email: ' + _contato.email.toString(), style: TextStyle(fontSize: 16, color: Colors.red)),
+              Text('CPF: ' + _contato.cpf.toString(), style: TextStyle(fontSize: 16, color: Colors.green)
+              ),
+            ],
+          )),
         ),
       ),
     );
   }
+
 }

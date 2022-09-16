@@ -26,7 +26,7 @@ class Editor_Contato extends StatelessWidget {
           labelText: rotulo,
           hintText: dica,
         ),
-        keyboardType: TextInputType.number,
+        keyboardType: TextInputType.name,
       ),
     );
   }

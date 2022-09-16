@@ -1,6 +1,8 @@
+
 class Transferencia {
   final double valor;
   final int numeroConta;
+
 
   Transferencia(
     this.valor,
@@ -8,7 +10,7 @@ class Transferencia {
   );
 
   @override
-  String toString() {
-    return 'Transferencia{valor: $valor, numeroConta: $numeroConta}';
+  String toDouble() {
+    return 'Transferencia {valor: $valor, numeroConta: $numeroConta}';
   }
 }
