@@ -22,14 +22,17 @@ class ListaTransferenciaState extends State<ListaTransferencia> {
         title: Text(_tituloAppBar),
         backgroundColor: Colors.redAccent [300],
       ),
+      backgroundColor: Color.fromARGB(255, 59, 2, 11),
       body: ListView.builder(
         itemCount: widget._transferencias.length,
         itemBuilder: ((context, indice) {
+          backgroundColor: Colors.black45;
           final transferencia = widget._transferencias[indice];
           return ItemTransferencia(transferencia);
         }),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black45,
         onPressed: () {
           final Future<Transferencia?> future = Navigator.push(
             context,

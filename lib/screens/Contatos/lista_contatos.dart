@@ -86,7 +86,6 @@ class FormularioContatosState extends State<FormularioContatos> {
   }
 
   void _criaCadastro (BuildContext context) {
-    //debugPrint('Clicou em confirmar');
     final String? nome = (
       _controladorCampoNome.text
     );
@@ -110,8 +109,6 @@ class FormularioContatosState extends State<FormularioContatos> {
         email,
         CPF,
       );
-      //debugPrint('Criando transferência');
-      //debugPrint('$transferenciaCriada');
       Navigator.pop(context, usuarioCriado);
     }
   }

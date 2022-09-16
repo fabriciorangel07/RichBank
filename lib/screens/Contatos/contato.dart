@@ -20,8 +20,9 @@ class ListaContatosState extends State<ListaContatos> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_tituloAppBar),
-        backgroundColor: Colors.redAccent [200],
+        backgroundColor: Colors.redAccent[200],
       ),
+      backgroundColor: Color.fromARGB(255, 44, 42, 42),
       body: ListView.builder(
         itemCount: widget._contatos.length,
         itemBuilder: ((context, indice) {
@@ -30,20 +31,21 @@ class ListaContatosState extends State<ListaContatos> {
         }),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromARGB(255, 64, 43, 65),
         onPressed: () {
           final Future<Contatos?> future = Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) {
-                  return FormularioContatos();
+                return FormularioContatos();
               },
             ),
           );
           future.then(
-                (contatoCriado) {
+            (contatoCriado) {
               if (contatoCriado != null) {
                 setState(
-                      () {
+                  () {
                     widget._contatos.add(
                       contatoCriado,
                     );
@@ -67,7 +69,7 @@ class ItemContato extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Card(
+    return Container(
       child: ListTile(
         leading: Icon(Icons.contact_mail_rounded),
         title: Text(
@@ -76,9 +78,6 @@ class ItemContato extends StatelessWidget {
         ),
         subtitle: Text(
           _contato.endereco.toString(),
-        ),
-        trailing: Text (
-          _contato.telefone.toString(),
         ),
       ),
     );

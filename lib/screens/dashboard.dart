@@ -19,6 +19,7 @@ class MenuDashboardState extends State<MenuDashboard> {
         backgroundColor: Colors.red,
         title: Text(_tituloAppBar),
       ),
+      backgroundColor: Color.fromARGB(255, 56, 4, 8),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,

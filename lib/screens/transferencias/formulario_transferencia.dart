@@ -55,6 +55,7 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
           ],
         ),
       ),
+      backgroundColor: Colors.purple,
     );
   }
 
