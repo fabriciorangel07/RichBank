@@ -1,6 +1,4 @@
-import 'dart:ffi';
-
-import 'package:flutter/foundation.dart';
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import '../../models/transferencia.dart';
 import 'formulario_transferencia.dart';
@@ -71,12 +69,13 @@ class ItemTransferencia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NumberFormat formatter = NumberFormat.simpleCurrency();
     // TODO: implement build
     return Card(
       child: ListTile(
         leading: Icon(Icons.monetization_on),
         title: Text(
-          _transferencia.valor.toString(),
+          formatter.format(_transferencia.valor),
         ),
         subtitle: Text(
           _transferencia.numeroConta.toString(),
